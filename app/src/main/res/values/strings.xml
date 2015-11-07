@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GestionPersonel</string>
+    <string name="titre">Liste des personels</string>
+</resources>
