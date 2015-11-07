@@ -17,7 +17,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        personnes = new ArrayList<Personne>();
         personnes.add(new Personne("aaa", "bbb", "ccc", "dd"));
         personnes.add(new Personne("aaa","bbb","ccc","dd"));
         personnes.add(new Personne("aaa","bbb","ccc","dd"));

@@ -27,8 +27,7 @@ public class PersonAdapter extends
         @Override
         public personViewHolder
         onCreateViewHolder(ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.card, parent);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card, parent, false);
                 personViewHolder personViewHolder = new personViewHolder(view);
                 return personViewHolder;
         }
