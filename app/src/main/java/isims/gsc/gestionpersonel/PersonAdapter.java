@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -27,19 +28,28 @@ public class PersonAdapter extends
         @Override
         public personViewHolder
         onCreateViewHolder(ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card, parent, false);
+                View view = LayoutInflater.
+                        from(parent.getContext()).
+                        inflate(R.layout.card, parent, false);
                 personViewHolder personViewHolder = new personViewHolder(view);
                 return personViewHolder;
         }
 
         @Override
         public void onBindViewHolder
-                (PersonAdapter.personViewHolder holder, int position) {
-                Personne personne = personnes.get(position);
+                (final PersonAdapter.personViewHolder holder, int position) {
+                final Personne personne = personnes.get(position);
                 holder.nom.setText(personne.getNom());
                 holder.prenom.setText(personne.getPrenom());
                 holder.fonction.setText(personne.getFonction());
                 holder.matricule.setText(personne.getMatricule());
+
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                                Toast.makeText(holder.itemView.getContext(),personne.toString(),Toast.LENGTH_SHORT).show();
+                        }
+                });
 
         }
 

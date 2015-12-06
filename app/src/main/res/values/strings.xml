@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">GestionPersonel</string>
     <string name="titre">Liste des personels</string>
+    <string name="btnTxt">Ajouter un nouveau employée</string>
+    <string name="nom">Nom:</string>
+    <string name="prenom">Prenom :</string>
+    <string name="fonction">Fonction:</string>
+    <string name="matricule">Matricule:</string>
 </resources>
